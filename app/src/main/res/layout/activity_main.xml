@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_select_you_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="400dp"
+        android:gravity="center"
+        android:text="选择你喜欢的兴趣标签"
+        android:textColor="#039BE5"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_select_you_like" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_must_select_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="最多选择三个"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec">
+
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="101dp"
+        android:layout_height="1dp"
+        android:background="#8F8F8F"
+        app:layout_constraintBottom_toBottomOf="@id/tv_must_select_3"
+        app:layout_constraintEnd_toStartOf="@+id/tv_must_select_3"
+        app:layout_constraintTop_toTopOf="@id/tv_must_select_3" />
+
+    <View
+        android:layout_width="101dp"
+        android:layout_height="1dp"
+        android:background="#8F8F8F"
+        app:layout_constraintBottom_toBottomOf="@id/tv_must_select_3"
+        app:layout_constraintStart_toEndOf="@+id/tv_must_select_3"
+        app:layout_constraintTop_toTopOf="@id/tv_must_select_3" />
+
+    <Button
+        android:onClick="OpenDialog"
+        android:id="@+id/btn_open_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open dialog"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_must_select_3"
+        app:layout_constraintStart_toStartOf="@+id/tv_must_select_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_must_select_3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
